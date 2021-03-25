@@ -1,0 +1,15 @@
+﻿@model DropDown.Dtos.FormDto
+
+<table class="table">
+    @foreach (var item in Model.Questions)
+    {
+        <tr class="row">
+            <td>@item.Name</td>
+        <td>
+            <select id="@item.Name" name="">
+                 @foreach (var itemValue in item.DropDown.DropDownValue) {<option>@itemValue.Name</option> }              
+            </select>
+        </td>
+        </tr>
+    }
+</table>
